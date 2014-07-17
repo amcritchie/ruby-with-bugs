@@ -26,19 +26,19 @@ class Bugs
   end
 
   def greeting
-    "Hi, my name is #{@users[:first_name]} #{@users[:last_name]}"
+    "Hi, my name is #{@user[:name][:first]} #{@user[:name][:last]}"
   end
 
   def street_address
-    "I live on #{@user["street"]}"
+    "I live on #{@user[:address][:street]}"
   end
 
   def state
-    "I live in #{@user[:state]}"
+    "I live in #{@user[:address]["state"]}"
   end
 
   def zip
-    "My zipcode is #{@user[:zip]}"
+    "My zipcode is #{@user[:address][:zipcode]}"
   end
 
   def fish(state)
