@@ -42,14 +42,15 @@ class Bugs
   end
 
   def fish(state)
-    @state_fish[state]
+    @state_fish[state.to_sym][:name]
   end
 
   def states(letter)
     result = []
     @states.each do |state|
-      result.pop(state) if state[0] == letter
+      result.push state if state[0] == letter
     end
+    result
   end
 
 end
